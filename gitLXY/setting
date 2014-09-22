@@ -1,0 +1,4 @@
+mkdir gitLXY
+CD gitLXY
+pwd
+git init
