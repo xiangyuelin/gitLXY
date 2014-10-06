@@ -1,0 +1,35 @@
+<html>
+ <head> <title>first page</title>
+ </head>
+
+ <body>
+   {% if error %}
+    <p class="error"><strong>Error:</strong> {{ error }}</p>
+    {% endif %}
+
+  {% if session.logged_in %}
+  <p>for searching, click it!</p>
+   <a href="{{url_for("s_titles")}}">title</a><br />
+
+  <hr />
+
+  <form action="{{url_for("s_blog")}}" method="post">
+  <input type="submit" value="exit" />
+  </form>
+  {% endif %}
+
+
+  {% if not session.logged_in %}
+  <form action="{{url_for("s_blog")}}" method="post">
+   <dl>
+    <dt>username</dt>
+     <dd><input type="text" name="username" /></dd>
+    <dt>password</dt>
+     <dd><input type="password" name="password" /></dd>
+     <dd><input type="submit" value="login" /></dd>
+  </form>
+  {% endif %}
+
+ </body>
+
+</html>

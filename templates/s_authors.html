@@ -1,0 +1,14 @@
+<html>
+ <head> <title>titles</title>
+ </head>
+
+ <body>
+  <p>search articles according to authors <br /></p>
+  <ul>
+  {% for blog in blogs %}
+    <li><a href="{{url_for('s_info', title=blog.title)}}"><em>{{blog.author}}</em></a>
+     <p>written by {{blog.author}}</p></li>
+  </ul>
+  {% endfor %}
+  </body>
+</html>

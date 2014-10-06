@@ -1,0 +1,29 @@
+<html>
+ <head> <title>article info</title>
+ </head>
+ <body>
+ <form class='blog'>
+ <p><h2>{{blog.title}}</h2></p>
+ <hr />
+ <p>content:<br /></p>
+ <p>{{blog.content}}</p>
+ <p>created_at:<br />{{blog.created_at}}</p>
+ <p>updated_at:<br />{{blog.updated_at}}</p>
+ <hr />
+ </form>
+
+ <form method="post">
+ <select name="choices" >
+ <option value="choices" selected="selected">choices</option>
+ <option value="update">update</option>
+ <option value="delete">delete</option>
+ </select>
+ <input type="submit" name="submit" />
+ </form>
+
+
+
+
+
+ </body>
+</html>
